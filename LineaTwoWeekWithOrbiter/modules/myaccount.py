@@ -8,6 +8,8 @@ from settings import value_eth, decimal_places
 from vars import RPC, SCANS, CHAIN_NAMES
 from help import sign_and_send_transaction, SUCCESS, FAILED, get_tx_data_withABI
 
+stay_eth = [0.0052, 0.0071]                                         # кол-во эфира, которое остается в сети оптимизм и линея (вычитается из всего баланса в сети)
+
 with open('data/ABIERC20.json') as file:
     ERC_20ABI = json.load(file)
 
