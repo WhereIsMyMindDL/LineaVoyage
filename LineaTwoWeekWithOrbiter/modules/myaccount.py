@@ -4,11 +4,11 @@ from web3 import Web3
 import random
 import json
 
-from settings import value_eth, decimal_places
+from settings import decimal_places
 from vars import RPC, SCANS, CHAIN_NAMES
 from help import sign_and_send_transaction, SUCCESS, FAILED, get_tx_data_withABI
 
-stay_eth = [0.0052, 0.0071]                                         # кол-во эфира, которое остается в сети оптимизм и линея (вычитается из всего баланса в сети)
+value_eth = [0.00001, 0.00006]                                      # минимальное и максимальное кол-во ETH для свапов и ликвы
 
 with open('data/ABIERC20.json') as file:
     ERC_20ABI = json.load(file)
